@@ -1,0 +1,15 @@
+# Welcome to Jekyll!
+#
+
+# Site settings
+title: Antonio Linero's Web Page
+description: |
+  The web page of Dr. Antonio Linero,
+  Assistant Professor in the Department of
+  Statistics, Florida State University
+owner: Antonio Linero
+first_published: 2015
+email: arlinero@stat.fsu.edu
+baseurl: "" # the subpath of your site, e.g. /blog
+# url: "http://ani.stat.fsu.edu/~arlinero"
+url: "http://localhost:4000"

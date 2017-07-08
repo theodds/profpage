@@ -1,0 +1,31 @@
+/*
+#nav { padding: 1.5em 0; } // but what is font size of #nav though
+#nav > ul { height: 21px; }
+*/
+#header {
+  padding-top: calc(21px + 3em);
+}
+
+
+@media screen and (max-width: 736px) {
+  /*
+  #navButton a.toggle:before { height: 30px; }
+  */
+  #header {
+    height: 90px;
+    padding-top: 15px;
+    /*padding-top: 30px;*/
+  }
+
+  /*
+  #header {
+    padding: 2.5em 0 0 0;
+  }
+  #header .inner {
+    padding-top: 1.5em;
+  }
+  body.homepage #header {
+    padding: 5.5em 0 5em 0;
+  }
+  */
+}
