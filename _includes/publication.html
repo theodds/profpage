@@ -1,0 +1,31 @@
+<article>
+  <a class="image featured" {% if publication.source %}href="{{ publication.source }}"{% endif %}>
+    <img src="{{ publication.image.url | default: '' }}"
+         alt="{{ publication.image.alt | default: '' }}" />
+  </a>
+
+  <header>
+    {% if publication.source %}
+    <a href="{{ publication.source }}">
+    {% endif %}
+      <h3>
+        {{ publication.authors }}
+        <span class="timestamp">{{ publication.displayDate }}</span>
+      </h3>
+    {% if publication.source %}
+    </a>
+    {% endif %}
+  </header>
+
+  <p>
+    {{ publication.title }}. {{ publication.blurb }}
+  </p>
+
+  {% if publication.links %}
+  <p>
+    {% for link in publication.links %}
+      <a href="{{ link.url }}">{{ link.text }}</a>
+    {% endfor %}
+  </p>
+  {% endif %}
+</article>

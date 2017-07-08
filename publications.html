@@ -1,0 +1,14 @@
+---
+layout: default
+title: Publications
+---
+
+<section class="carousel">
+
+  {% assign publications = (site.publications | sort: 'date') | reverse %}
+
+  {% for publication in publications %}
+    {% include publication.html publication=publication %}
+  {% endfor %}
+
+</section>

@@ -2,7 +2,7 @@
 #
 
 # Site settings
-title: Antonio Linero's Web Page
+title: Antonio Linero
 description: |
   The web page of Dr. Antonio Linero,
   Assistant Professor in the Department of
@@ -13,3 +13,6 @@ email: arlinero@stat.fsu.edu
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "http://ani.stat.fsu.edu/~arlinero"
 url: "http://localhost:4000"
+permalink: pretty
+collections:
+  publications:
