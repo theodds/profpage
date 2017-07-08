@@ -6,6 +6,17 @@
   padding-top: calc(21px + 3em);
 }
 
+body.homepage #header {
+  height: 50vh;
+  min-height: 20em;
+}
+
+#header h1 small {
+  display: block;
+  font-size: 0.4em;
+  /*line-height: 1.25em;*/
+  font-weight: 400;
+}
 
 @media screen and (max-width: 736px) {
   /*
