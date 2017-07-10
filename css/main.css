@@ -18,6 +18,26 @@ body.homepage #header {
   font-weight: 400;
 }
 
+/* TODO */
+
+#cv {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 2em 0;
+  text-align: center;
+}
+
+#cv a {
+  height: 1em;
+}
+
+#cv .pdf {
+  height: calc(100vh - 9em); /* 4em #cv padding + 4em .pdf margin + 1em a height */
+  width: calc((100vh - 9em) * 8.5 / 11);
+  margin: 2em auto;
+}
+
 @media screen and (max-width: 736px) {
   /*
   #navButton a.toggle:before { height: 30px; }
