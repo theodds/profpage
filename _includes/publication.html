@@ -1,7 +1,11 @@
 <article>
   <a class="image featured" {% if publication.source %}href="{{ publication.source }}"{% endif %}>
+    {% if publication.image %}
     <img src="{{ publication.image.url | default: '' }}"
          alt="{{ publication.image.alt | default: '' }}" />
+    {% else %}
+      <img class="no-image" alt="No image provided" />
+    {% endif %}
   </a>
 
   <header>
@@ -21,11 +25,9 @@
     {{ publication.title }}. {{ publication.blurb }}
   </p>
 
-  {% if publication.links %}
   <p>
-    {% for link in publication.links %}
-      <a href="{{ link.url }}">{{ link.text }}</a>
-    {% endfor %}
+  {% for link in publication.links %}
+    <a href="{{ link.url }}">{{ link.text }}</a>
+  {% endfor %}
   </p>
-  {% endif %}
 </article>
