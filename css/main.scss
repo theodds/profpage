@@ -26,33 +26,20 @@
 @-o-keyframes fade-out      { @include fadeout(); }
 @keyframes fade-out         { @include fadeout(); }
 
-// @-webkit-keyframes fadein {
-//  from { opacity: 0; }
-//  to   { opacity: 1; }
-// }
-// @-moz-keyframes fadein {
-//   from { opacity: 0; }
-//   to   { opacity: 1; }
-// }
-// @-ms-keyframes fadein {
-//  from { opacity: 0; }
-//  to   { opacity: 1; }
-// }
-// @-o-keyframes fadein {
-//  from { opacity: 0; }
-//  to   { opacity: 1; }
-// }
-// @keyframes fadein {
-//   from { opacity: 0; }
-//   to   { opacity: 1; }
-// }
-
 @mixin animation($animation) {
   -webkit-animation: $animation;
   -moz-animation: $animation;
   -ms-animation: $animation;
   -o-animation: $animation;
   animation: $animation;
+}
+
+@mixin backface-visibility($backface-visibility) {
+  -webkit-backface-visibility: $backface-visibility;
+  -moz-backface-visibility: $backface-visibility;
+  -ms-backface-visibility: $backface-visibility;
+  -o-backface-visibility: $backface-visibility;
+  backface-visibility: $backface-visibility;
 }
 
 @mixin transform($transform) {
@@ -83,7 +70,6 @@ body.homepage #page-wrapper .wrapper.style1 {
   h1 small {
     display: block;
     font-size: 0.4em;
-    /*line-height: 1.25em;*/
     font-weight: 400;
   }
 }
@@ -138,10 +124,6 @@ body.homepage #page-wrapper .wrapper.style1 {
     white-space: normal;
     opacity: 1.0;
     @include transition(opacity 0.75s ease-in-out);
-    // -moz-transition: opacity 0.75s ease-in-out;
-    // -webkit-transition: opacity 0.75s ease-in-out;
-    // -ms-transition: opacity 0.75s ease-in-out;
-    // transition: opacity 0.75s ease-in-out;
 
     h3 {
       height: 77px;
@@ -366,7 +348,6 @@ body.homepage #page-wrapper .wrapper.style1 {
     & > ul {
       width: 100%;
       height: 100%;
-      // padding-top: 2px;
 
       & > li {
         display: block;
@@ -374,13 +355,13 @@ body.homepage #page-wrapper .wrapper.style1 {
         border-radius: 0;
         margin: 0;
         line-height: 1em;
-        padding: 12px 0;
-        height: calc(1em + 24px);
+        padding: 11px 0 13px;
+        height: calc(1em + 25px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
         &:first-child {
-          padding-top: 14px;
-          height: calc(1em + 26px);
+          padding: 12px 0 15px;
+          height: calc(1em + 27px);
         }
 
         &:last-child {
@@ -427,6 +408,45 @@ body.homepage #page-wrapper .wrapper.style1 {
 
   #nav {
     display: block;
+
+    & > ul > li {
+      padding-left: 0.1em;
+      padding-right: 0.1em;
+      margin-left: .75em;
+      margin-right: .75em;
+      outline: 0;
+      border: none;
+    }
+
+    li {
+      position: relative;
+      @include backface-visibility(hidden);
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 0;
+        bottom: -2px;
+        left: 50%;
+
+        $ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+        background: rgba(255, 255, 255, 0.5);
+        @include backface-visibility(hidden);
+        @include transform(translateX(-50%));
+        @include transition(0.35s all $ease-in-out-quart);
+      }
+
+      &:hover, &:active, &.active {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &.active::after {
+        background: rgba(255, 255, 255, 0.75);
+      }
+    }
   }
 }
 
