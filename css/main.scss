@@ -1,0 +1,438 @@
+---
+---
+
+/****************
+ *    Mixins    *
+ ****************/
+
+@mixin fadein() {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@mixin fadeout() {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@-webkit-keyframes fade-in { @include fadein(); }
+@-moz-keyframes fade-in    { @include fadein(); }
+@-ms-keyframes fade-in     { @include fadein(); }
+@-o-keyframes fade-in      { @include fadein(); }
+@keyframes fade-in         { @include fadein(); }
+
+@-webkit-keyframes fade-out { @include fadeout(); }
+@-moz-keyframes fade-out    { @include fadeout(); }
+@-ms-keyframes fade-out     { @include fadeout(); }
+@-o-keyframes fade-out      { @include fadeout(); }
+@keyframes fade-out         { @include fadeout(); }
+
+// @-webkit-keyframes fadein {
+//  from { opacity: 0; }
+//  to   { opacity: 1; }
+// }
+// @-moz-keyframes fadein {
+//   from { opacity: 0; }
+//   to   { opacity: 1; }
+// }
+// @-ms-keyframes fadein {
+//  from { opacity: 0; }
+//  to   { opacity: 1; }
+// }
+// @-o-keyframes fadein {
+//  from { opacity: 0; }
+//  to   { opacity: 1; }
+// }
+// @keyframes fadein {
+//   from { opacity: 0; }
+//   to   { opacity: 1; }
+// }
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -ms-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+/****************
+ *    Styles    *
+ ****************/
+
+body.homepage #page-wrapper .wrapper.style1 {
+  margin-bottom: 0;
+}
+
+#header {
+  padding-top: calc(21px + 3em);
+
+  h1 small {
+    display: block;
+    font-size: 0.4em;
+    /*line-height: 1.25em;*/
+    font-weight: 400;
+  }
+}
+
+
+/****************
+ *      CV      *
+ ****************/
+
+#cv {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 2em 0;
+  text-align: center;
+
+  a {
+    height: 1em;
+  }
+
+  .pdf {
+    height: calc(100vh - 9em); /* 4em #cv padding + 4em .pdf margin + 1em a height */
+    width: calc((100vh - 9em) * 8.5 / 11);
+    margin: 2em auto;
+  }
+}
+
+
+/****************
+ * Publications *
+ ****************/
+
+.publications {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  overflow: hidden;
+  padding: 2em 0 2em 0;
+  margin-bottom: 0;
+  width: 100%;
+
+  article {
+    /* TODO flex column for insides */
+    display: inline-block;
+    width: 18em;
+    background: #fff;
+    text-align: center;
+    padding: 1em 1em 3em 1em;
+    margin: 0 2em 2em 0;
+    white-space: normal;
+    opacity: 1.0;
+    @include transition(opacity 0.75s ease-in-out);
+    // -moz-transition: opacity 0.75s ease-in-out;
+    // -webkit-transition: opacity 0.75s ease-in-out;
+    // -ms-transition: opacity 0.75s ease-in-out;
+    // transition: opacity 0.75s ease-in-out;
+
+    h3 {
+      height: 77px;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .image {
+      margin-bottom: 3em;
+
+      img {
+        height: 10em;
+        width: auto;
+        margin: auto;
+
+        &.no-image {
+          visibility: hidden;
+
+          &::after {
+            content: 'No Image Provided';
+            display: block;
+            height: 10em;
+            line-height: 1em;
+            text-align: center;
+            width: 100%;
+            visibility: visible;
+            padding-top: 50%;
+            @include transform(translateY(-50%));
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/****************
+ *  Max-Widths  *
+ ****************/
+
+@media screen and (max-width: 1680px) {
+  .publications {
+    padding: 1.5em 0 1.5em 0;
+
+    article {
+      width: 18em;
+      margin: 0 1.25em 1.25em 0;
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  #header {
+    font-size: 16px;
+  }
+
+  .publications  {
+    padding: 1.25em 0 1.25em 0;
+
+    article {
+      width: 18em;
+      margin: 0 1em 1em 0;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+
+  body:not(.homepage) #header .inner {
+    padding-top: 0;
+    padding-bottom: 1.5em;
+  }
+
+  .publications {
+    padding: 0.5em 0 0.5em 0;
+
+    article {
+      width: calc(50% - 1em);
+      padding-bottom: 2em;
+      margin: 0 0.5em 0.5em 0;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      .image {
+        margin-bottom: 2em;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 528px) {
+  body {
+    &.homepage {
+      #header .inner {
+        padding-top: calc((125px - 3em) / 2);
+      }
+
+      p {
+        text-align: left;
+      }
+    }
+
+    &:not(.homepage) {
+      #header .inner {
+        padding-top: 1.5em;
+      }
+    }
+
+    &.homepage, &:not(.homepage) {
+      #header {
+        height: 125px;
+        padding: 0;
+      }
+    }
+  }
+
+
+  /**************** Mobile Nav
+   *
+   * Original icon animations from
+   * https://codepen.io/designcouch/pen/Atyop
+   */
+
+  #mobile-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    height: 20px;
+    width: 20px;
+    border-bottom: 0;
+    z-index: 1000;
+    @include transform(rotate(0deg));
+    @include transition(rotate .5s ease-in-out);
+    cursor: pointer;
+
+    span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: white;
+      border-radius: 25%;
+      opacity: 1;
+      left: 0;
+      @include transform(rotate(0deg));
+      @include transition(.25s ease-in-out);
+
+      &:nth-child(1) {
+        top: 0px;
+      }
+
+      &:nth-child(2), &:nth-child(3) {
+        top: 6px;
+      }
+
+      &:nth-child(4) {
+        top: 12px;
+      }
+    }
+
+    &.open {
+      span {
+        &:nth-child(1) {
+          top: 6px;
+          width: 0%;
+          left: 50%;
+        }
+
+        &:nth-child(2) {
+          @include transform(rotate(45deg));
+        }
+
+        &:nth-child(3) {
+          @include transform(rotate(-45deg));
+        }
+
+        &:nth-child(4) {
+          top: 6px;
+          width: 0%;
+          left: 50%;
+        }
+      }
+
+      & ~ #nav {
+        display: block;
+
+        li {
+          @include animation(fade-in .5s);
+        }
+      }
+
+      & ~ .inner {
+        opacity: 0;
+        @include animation(fade-out .1s)
+      }
+    }
+
+    &:not(.open) {
+      & ~ #nav li {
+        @include animation(fade-out .1s);
+      }
+
+      & ~ .inner {
+        @include animation(fade-in .5s);
+      }
+    }
+  }
+
+  #nav {
+    height: 125px;
+    padding: 0;
+
+    & > ul {
+      width: 100%;
+      height: 100%;
+      // padding-top: 2px;
+
+      & > li {
+        display: block;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        line-height: 1em;
+        padding: 12px 0;
+        height: calc(1em + 24px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+        &:first-child {
+          padding-top: 14px;
+          height: calc(1em + 26px);
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover, &:active {
+          background: rgba(0, 0, 0, .1);
+        }
+      }
+    }
+  }
+
+  .publications article {
+    margin-right: 0;
+    width: 100%;
+
+    header {
+      margin-top: 1em;
+      margin-bottom: 0;
+    }
+
+    .image {
+      display: none;
+
+      img.no-image {
+        height: auto;
+        margin-top: -5em;
+        margin-bottom: -5em;
+      }
+    }
+  }
+}
+
+/****************
+ *  Min-Widths  *
+ ****************/
+
+@media screen and (min-width: 529px) {
+  body.homepage #header {
+    height: 30vh;
+    min-height: 15em;
+  }
+
+  #nav {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 737px) {
+  body.homepage #header {
+    height: 50vh;
+    min-height: 20em;
+  }
+}
