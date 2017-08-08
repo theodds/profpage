@@ -117,6 +117,7 @@ body:not(.homepage) {
 
 #footer {
   span#email {
+    // TODO slide out/unscroll
     display: inline-block;
     padding-top: 0.5em;
     margin-right: -7px;
@@ -141,7 +142,7 @@ body:not(.homepage) {
   }
 
   .pdf {
-    height: calc(100vh - 9em); /* 4em #cv padding + 4em .pdf margin + 1em a height */
+    // height: calc(100vh - 9em); /* 4em #cv padding + 4em .pdf margin + 1em a height */
     width: calc((100vh - 9em) * 8.5 / 11);
     margin: 2em auto;
   }
@@ -216,8 +217,11 @@ body:not(.homepage) {
  *   Calendar   *
  ****************/
 
-.calendar {
-
+.calendar.iframe {
+  background: $white;
+  height: 600px;
+  width: 100%;
+  padding: 20px;
 }
 
 /****************
@@ -306,6 +310,9 @@ body:not(.homepage) {
     }
   }
 
+  #header {
+    @include transition(height 0.25s);
+  }
 
   /**************** Mobile Nav
    *
@@ -401,7 +408,7 @@ body:not(.homepage) {
   }
 
   #nav {
-    height: 125px;
+    height: 100%;
     padding: 0;
 
     & > ul {

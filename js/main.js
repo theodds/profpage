@@ -5,7 +5,18 @@
 
     $body
       .on('click', '#mobile-nav', function() {
-        $(this).toggleClass('open');
+        var $header = $('#header');
+        var $mobileNav = $(this);
+        var $navItems = $('#nav').find('li');
+
+        $mobileNav.toggleClass('open');
+
+        if ($mobileNav.hasClass('open')) {
+          var headerHeight = $navItems.first().height() * $navItems.length;
+          $header.height(headerHeight + 'px');
+        } else {
+          $header.height('');
+        }
       })
       .on('click', 'a[href=#email]', function() {
         var $li = $('a[href=#email]').closest('li');
