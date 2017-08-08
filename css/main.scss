@@ -142,8 +142,8 @@ body:not(.homepage) {
   }
 
   .pdf {
-    // height: calc(100vh - 9em); /* 4em #cv padding + 4em .pdf margin + 1em a height */
-    width: calc((100vh - 9em) * 8.5 / 11);
+    width: 100vw;
+    height: calc(100vw * 11 / 8.5);
     margin: 2em auto;
   }
 }
@@ -516,9 +516,9 @@ body:not(.homepage) {
     }
   }
 
-  .modal {
-    height: 480px;
-    width: 480px;
+  #cv .pdf {
+    height: 100vw; /* 4em #cv padding + 4em .pdf margin + 1em a height */
+    width: calc(100vw * 8.5 / 11);
   }
 }
 
