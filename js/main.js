@@ -7,34 +7,31 @@
       .on('click', '#mobile-nav', function() {
         $(this).toggleClass('open');
       })
-      .on('click', 'a.modal', function(e) {
-        e.stopPropagation();
-        var id = $(this).attr('href');
-        var $modal = $('aside.modal' + id);
+      .on('click', 'a[href=#email]', function() {
+        var $li = $('a[href=#email]').closest('li');
 
-        if ($modal.length) {
-          $body.addClass('modal-open');
-          $modal.addClass('open');
+        // Close email if already open
+        if ($li.hasClass('open')) {
+          $('span#email').remove();
+          $li.removeClass('open');
+          return;
         }
-      })
-      .on('click', '.modal .close', function() {
-        closeModal();
-      })
-      .on('click', function(e) {
-        if ($body.hasClass('modal-open')) {
-          var $target = $(e.target);
-          var modalTargeted = $target.hasClass('modal') || $target.closest('.modal').length;
-          if (!modalTargeted) {
-            closeModal();
-          }
-        }
+
+        var emailName = 'arlinero';
+        var emailDomain = 'stat.fsu.edu';
+        var $email = $(
+          '<span id="email">' +
+            '<a href="mailto:' +
+              emailName + '@' + emailDomain + '">' +
+              emailName + '@' + emailDomain +
+            '</a>' +
+          '</span>'
+        );
+
+        $email.insertAfter($li);
+        $li.addClass('open');
       })
     ;
-
-    function closeModal() {
-      $('body').removeClass('modal-open');
-      $('aside.modal').removeClass('open');
-    }
 
 	});
 })(jQuery);
