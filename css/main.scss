@@ -204,6 +204,57 @@ body:not(.homepage) {
 
 
 /****************
+ *    Modals    *
+ ****************/
+
+body.modal-open {
+  #header, #header + div, #footer {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    pointer-events: none;
+  }
+}
+
+aside.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  // width: 100vh;
+  // height: 100vh;
+  width: 100%;
+  // width: calc(100vh - 6px);
+  // height: calc(100vh - 6px);
+  height: 480px;
+  top: 50%;
+  @include transform(translateY(-50%));
+  border: 3px solid $bg-color;
+  background-color: $white;
+
+  &.open {
+    display: block;
+  }
+
+  &#calendar {
+
+  }
+
+  &#contact {
+
+  }
+
+  &#courses {
+
+  }
+}
+
+
+/****************
  *  Max-Widths  *
  ****************/
 
@@ -490,6 +541,11 @@ body:not(.homepage) {
         background: rgba($white, 0.75);
       }
     }
+  }
+
+  .modal {
+    height: 480px;
+    width: 480px;
   }
 }
 

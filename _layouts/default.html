@@ -9,7 +9,7 @@
   {% include head.html %}
 
 	<body class="no-sidebar">
-		<div id="page-wrapper" class="{{ page.title }}">
+		<div id="page-wrapper {{ page.title | downcase }}">
 
       {% include header.html %}
 

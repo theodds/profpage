@@ -3,7 +3,7 @@ layout: default
 title: Publications
 ---
 
-<section class="publications">
+<div class="publications">
 
   {% assign publications = (site.publications | sort: 'date') | reverse %}
 
@@ -11,4 +11,4 @@ title: Publications
     {% include publication.html publication=publication %}
   {% endfor %}
 
-</section>
+</div>
