@@ -2,6 +2,13 @@
 ---
 
 /****************
+ *   Variables  *
+ ****************/
+
+ $bg-color: #2D5566;
+ $white: #FFF;
+
+/****************
  *    Mixins    *
  ****************/
 
@@ -60,25 +67,46 @@
  *    Styles    *
  ****************/
 
-body.homepage  {
-  #header::after {
-    // content: none;
-    background: #2D5566;
-    @include transition(opacity 1s ease-in-out);
-  }
-
+body.homepage {
   #page-wrapper .wrapper.style1 {
     margin-bottom: 0;
   }
 }
 
+body.homepage,
+body:not(.homepage) {
+  #header::after {
+    content: '';
+    background: $bg-color;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    @include transition(opacity 1s ease-in-out);
+  }
+
+  &.is-loading {
+    #header::after {
+      opacity: 1;
+    }
+  }
+}
+
 #header {
+  background-image: url('/images/header.jpg');
   padding-top: calc(21px + 3em);
 
   h1 small {
     display: block;
     font-size: 0.4em;
     font-weight: 400;
+  }
+
+  .inner {
+    opacity: 1;
   }
 }
 
@@ -333,23 +361,24 @@ body.homepage  {
         display: block;
 
         li {
-          @include animation(fade-in .5s);
+          @include animation(fade-in 0.5s);
         }
       }
 
       & ~ .inner {
         opacity: 0;
-        @include animation(fade-out .1s)
+        @include animation(fade-out 0.1s)
       }
     }
 
     &:not(.open) {
       & ~ #nav li {
-        @include animation(fade-out .1s);
+        @include animation(fade-out 0.1s);
       }
 
       & ~ .inner {
-        @include animation(fade-in .5s);
+        opacity: 1;
+        @include transition(opacity 0.5s ease-in-out);
       }
     }
   }
@@ -369,7 +398,7 @@ body.homepage  {
         margin: 0;
         line-height: 1em;
         padding: 0;
-        background: rgba(45, 85, 102, 0.15);
+        background: rgba($bg-color, 0.15);
         margin-bottom: 1px;
         height: calc(123px * (1 / 3));
 
@@ -445,7 +474,7 @@ body.homepage  {
         left: 50%;
 
         $ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba($white, 0.5);
         @include backface-visibility(hidden);
         @include transform(translateX(-50%));
         @include transition(0.35s all $ease-in-out-quart);
@@ -458,7 +487,7 @@ body.homepage  {
       }
 
       &.active::after {
-        background: rgba(255, 255, 255, 0.75);
+        background: rgba($white, 0.75);
       }
     }
   }
