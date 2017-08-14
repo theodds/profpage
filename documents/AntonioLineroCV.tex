@@ -1,0 +1,334 @@
+\documentclass[11pt]{moderncv}
+\usepackage[authoryear]{natbib}
+
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
+\DeclareRobustCommand*\mit{\@fontswitch\relax\mathnormal}
+
+\moderncvtheme[blue]{classic}
+
+\usepackage[scale=0.8]{geometry}
+
+\firstname{Antonio}
+\familyname{{}Linero}
+\title{Assistant Professor of Statistics}
+\address{Tallahassee}{Florida}
+\email{arlinero@stat.fsu.edu}
+\homepage{ani.stat.fsu.edu/\textasciitilde arlinero}
+\extrainfo{\today}
+
+% Define \cvdoublecolumn, which sets its arguments in two columns
+% without any labels
+
+\newcommand{\cvdoublecolumn}[2]{%
+  {}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+   }%
+}
+
+% usage: \cvreference{name}{address line 1}{address line 2}{address
+% line 3}{address line 4}{e-mail address}{phone number} Everything but
+% the name is optional If \addresssymbol, \emailsymbol or \phonesymbol
+% are specified, they will be used.  (Per default, \addresssymbol
+% isn't specified, the other two are specified.)  If you don't like
+% the symbols, remove them from the following code, including the
+% tilde ~ (space).
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+
+\setlength{\hintscolumnwidth}{0.2\textwidth}
+
+% \cventry{year–year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+
+\begin{document}
+\maketitle
+
+\section{Professional Experience}
+
+\cventry{August 2015--Present}{Assistant Professor}{Florida State University}
+        {Department of Statistics}{}{}
+
+\section{Education}
+
+\cventry{2010--2015}{PhD, Statistics}{University of
+  Florida}{}{}{{Dissertation ---  {\em Nonparametric Bayes: Inference Under
+  Nonignorable Missingness and Model Selection}}}
+
+\cventry{2005--2009}{BS, Finance}{University of Florida}{}{}{Minor---Statistics}
+
+% \cvitem{}{}
+
+\section{External Funding}
+
+\cvitem{2017--2020}{\emph{Leveraging Structural Information in Decision Tree
+    Ensembles} (PI). Funded by the National Science Foundation (NSF-DMS
+  1712870). Total award \$100,000.}{}
+
+\cvitem{2016--2018}{\emph{Functional Analysis Tools (FATs)} (Co-PI). Funded by
+  Department of Defense (SOT-FSU-FATs-16-06). Total award \$327,000.}{}
+
+
+
+\section{Awards}
+
+\cventry{Spring 2016}{First Year Assistant Professor Award}{Florida State University}
+{}{}{Funding for summer research work.}
+
+\cventry{Spring 2015}{CLAS Dissertation Fellowship}{University of
+  Florida}{}{}{Funding for writing of PhD dissertation.}
+
+\cventry{2014}{Statistics Faculty Award}{University of
+  Florida}{}{}{Awarded to ``the best graduating PhD student'' in the
+  Department of Statistics.}
+
+\cventry{2014}{Laplace Award}{}{}{awarded by the International Society
+  for Bayesian Analysis and the Section of Bayesian Statistical
+  Science of the American Statistical Association}{For best Bayesian
+  student paper.} 
+
+\cventry{2014}{Student Travel Award}{}{}{awarded by the Section of
+  Bayesian Statistical Science}{To attend the Joint Statistical
+  Meeting.}
+
+\cventry{Fall 2010--Spring 2011}{Mendenhall Fellow}{University of
+  Florida}{}{}{Fellowship awarded to top incoming students.}
+
+\cventry{Fall 2010--Spring 2013}{Grinter Fellow}{University of
+  Florida}{}{}{Research and graduate program fellowship.}
+
+\section{Publications in review}
+
+\cvitem{}{\textbf{Linero, A.R.} and Yang, Y. (2017) Bayesian Regression Tree Ensembles that Adapt to Smoothness and Sparsity. Submitted.}
+
+\cvitem{}{\textbf{Linero, A.R.} and Bradley, J.R (2017) Multi-rubric models for
+  ordinal spatial data with application to online ratings from Yelp. Submitted.}
+
+\cvitem{}{\textbf{Linero, A.R.} and Daniels, M.J. (2017) A General Bayesian
+  Nonparametric Approach for Missing Outcome Data. Major revision at
+  \emph{Statistical Science.}}
+
+
+\section{Publications in press}
+
+\cvitem{}{Varbanov, R., Chicken, E., and \textbf{Linero, A.R.} (2017)
+  Wavelet-Based Bayesian Profile Monitoring. \emph{Proceedings of
+    the 2017 Industrial and Systems Engineering Research Conference.}}
+
+\cvitem{}{\textbf{Linero, A.R.} (2017) Bayesian Nonparametric Analysis of
+  Longitudinal Studies in the Presence of Informative Missingness.
+  \emph{Biometrika,} \textbf{104}(2): 371--341}
+
+\cvitem{}{\textbf{Linero, A.R.} (2016) Bayesian regression trees for high
+  dimensional prediction and variable selection. \emph{Journal of the American
+    Statistical Association.} To appear.}
+
+
+\cvitem{}{
+  Piekarewicz, J., \textbf{Linero, A.R.}, Giuliani, P., and Chicken, E. (2016)
+  The power of two: Assessing the impact of a second measurement of the weak-charge
+  form factor of \(^{208}\textnormal{Pb}\). \emph{Physical Reviews C,}
+  \textbf{94}(3), 034316.
+}
+
+\cvitem{}{Daniels, M.J. and {\bf Linero, A.R.} (2015) Bayesian
+  nonparametrics for missing data in longitudinal clinical
+  trials. In {\em Nonparametric Bayesian Inference in Biostatistics.}}
+
+\cvitem{}{{\bf Linero, A.R.} and Daniels, M.J. (2015) A flexible
+  Bayesian approach to monotone missing data in longitudinal studies
+  with nonignorable missingness with application to an acute
+  schizophrenia clinical trial. {\em Journal of the American
+    Statistical Association,} {\bf 110}(509), 45--55.}
+
+\cvitem{}{{\bf Linero, A.R} and Rosalsky, A. (2013) On the Toeplitz
+  lemma, convergence in probability, and mean convergence. {\em Stochastic
+  Analysis and Applications,} {\bf 31}(4), 684-694.}
+  
+
+% \nocite{*}
+% \bibliographystyle{unsrt}
+% \bibliographystyle{apalike}
+% \bibliographystyle{unsrtnat}
+% \bibliography{publications}
+
+
+% \section{Manuscripts in Preparation}
+
+% \cvitem{}{Bradley, J.R., \textbf{Linero, A.R.} and Chicken, E.K. A
+%   repeated--measures multivariate spatio--temporal mixed effects model for
+%   ordinal data.}
+
+% \cvitem{}{{\bf Linero, A.R.} and Doss, H. A Fully-Bayes Approach to Empirical
+%   Bayes Inference and Bayesian Sensitivity Analysis.}
+
+% \section{Invited Presentations}
+
+% \cvitem{01/12/2015}{Flexible Bayesian Analysis in the Presence of
+%   Nonignorable Missingness. {\em Florida State University}}
+% \cvitem{01/20/2015}{Flexible Bayesian Analysis in the Presence of
+%   Nonignorable Missingness. {\em Arizona State University}}
+% \cvitem{01/29/2015}{Flexible Bayesian Analysis in the Presence of
+%   Nonignorable Missingness. {\em University of Illinois at Urbana Champaign}}
+% \cvitem{02/08/2015}{Flexible Bayesian Analysis in the Presence of
+%   Nonignorable Missingness. {\em Texas A\&M University}}
+
+
+\section{Presentations}
+
+\subsection{Invited}
+
+\cventry{2017}{Joint Statistical Meeting}
+{Sensitivity Analysis for Longitudinal Clinical Trials with Nonmonotone Missingness}{}{}{}
+
+\cventry{07/17/2017}{EcoSta}{Bayesian regression trees for high-dimensional
+  prediction and variable selection}{}{}{}
+
+\cventry{12/10/2016}{CM Statistics}{Bayesian Nonparametric Analysis of
+  Longitudinal Studies with Informative Missingness}{}{}{}
+
+\cventry{9/29/2016}{University of Florida Statistics Symposium}{Bayesian
+  Regression Trees for High Dimensional Prediction and Variable Selection}{}{}{}
+
+\cventry{6/12/2016}{ICSA Applied Statistics Symposium}{Bayesian Regression Trees
+  for High Dimensional Prediction and Variable Selection}{}{}{}
+
+\cventry{2/11/2015}{University of California at Irvine}{Flexible Bayesian
+  Analysis in the Presence of Nonignorable Missingness}{}{}{}
+
+\cventry{2/09/2015}{Texas A\&M University}{Flexible Bayesian
+  Analysis in the Presence of Nonignorable Missingness}{}{}{}
+
+\cventry{1/28/2015}{University of Illinois at
+  Urbana-Champaign}{Flexible Bayesian Analysis in the Presence of
+  Nonignorable Missingness}{}{}{}
+
+\cventry{1/20/2015}{Arizona State University}{Flexible Bayesian
+  Analysis in the Presence of Nonignorable Missingness}{}{}{}
+
+\cventry{1/12/2015}{Florida State University}{Flexible Bayesian
+  Analysis in the Presence of Nonignorable Missingness}{}{}{}
+
+\subsection{Contributed}
+
+\cventry{2014}{Joint Statistical Meeting}{A Flexible Bayesian Approach
+  to Monotone Missing Data in Longitudinal Studies with Informative
+  Dropout with Application to a Schizophrenia Clinical Trial}{}{}{}
+
+\section{Service}
+
+\cventry{}{Reviewer}{}{}{
+  Annals of Applied Statistics,
+  Biometrics,
+  Journal of the American Statistical Association,
+  Journal of Epidemiology,
+  Journal of Statistical Distributions and Applications,
+  PLOS One,
+  Psychological Methods,
+  Sankhya Series A,
+  Statistica Sinica,
+  Statistical Methods in Medical Research,
+  Statistical Science,
+  Statistics in Medicine
+}{} 
+
+\cventry{2016}{CM Statistics}{}{}{Chair of session ``Bayesian Methods for
+  Dependent Data''}{}
+
+\cventry{2014}{ENAR Spring Meeting}{}{}{Chair of session ``Innovative
+  Bayesian Nonparametrics in Biostatistics''}{}
+
+\section{Teaching}
+
+\subsection{At Florida State University}
+
+\cvitem{\textbf{STA4442}}{Introduction to probability. Fall 2015, Spring 2017}
+\cvitem{\textbf{STA5168}}{Statistics in Applications 3. Fall 2016}
+\cvitem{\textbf{STA3032}}{Engineering Statistics. Spring 2016}
+
+\subsection{At University of Florida}
+
+\cvitem{\textbf{STA4321}}{Introduction to Probability. Spring 2013}
+
+
+\section{Technical Skills}
+
+\cvitem{{\em Languages \& Software}}{R, BUGS/JAGS/STAN, C++, Python, \LaTeX,
+  Matlab/Octave, Julia, Linux/Windows/OSX}
+
+% \section{Research Interests}
+
+% \cvitem{}{Applications of Bayesian methods to problems in
+%   Biostatistics and machine learning.}  
+
+% \cvitem{}{Inference in longitudinal studies with
+%   missing data and causal inference.}
+
+% \cvitem{}{Bayesian nonparametrics and semiparametrics.}
+
+% \cvitem{}{Computational issues associated with the above.}
+
+%\section{References}
+%
+%\cvdoublecolumn{
+%  \cvreference{Michael Daniels}
+%  {Section of Integrative Biology, Department of Statistics \& Data Sciences}
+%  {University of Texas at Austin}
+%  {Austin, TX}
+%  {}
+%  {mjdaniels@austin.utexas.edu}
+%  {512-471-4128}
+%  \\[1em] \ \\
+%  \cvreference{Malay Ghosh}
+%  {Department of Statistics}
+%  {University of Florida}
+%  {}
+%  {Gainesville, Florida}
+%  {ghoshm@stat.ufl.edu}
+%  {352-273-2992}
+%  \\[1em] \ \\
+%  \cvreference{Nikolay Bliznyuk}
+%  {Institute of Food and Agricultural Sciences, Statistics Unit}
+%  {University of Florida} 
+%  {}
+%  {Gainesville, Florida}
+%  {nbliznyuk@ufl.edu}
+%  {352-392-1946}
+%}
+%{\cvreference{Hani Doss}
+%  {Department of Statistics}
+%  {University of Florida}
+%  {}
+%  {Gainesville, Florida}
+%  {doss@stat.ufl.edu }
+%  {352-273-2991 }
+%  \\ \ \\ \ \\ \ \\ \
+%  \cvreference{Andrew Rosalsky}
+%  {Department of Statistics}
+%  {University of Florida}
+%  {Gainesville, Florida}
+%  {}
+%  {rosalsky@stat.ufl.edu}
+%  {352-273-2983}
+%}
+
+\end{document}
+
+%  LocalWords:  Statistica Sinica

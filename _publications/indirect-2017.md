@@ -11,5 +11,5 @@ image:
 links:
   -
     text: "Supplemental Material"
-    url: "https://ani.stat.fsu.edu/~arlinero/assets/documents/Supplementary-Material-Indirect.pdf"
+    url: "https://academic.oup.com/biomet/article-abstract/104/2/327/3737785/Bayesian-nonparametric-analysis-of-longitudinal?redirectedFrom=fulltext"
 ---
