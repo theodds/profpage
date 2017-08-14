@@ -11,8 +11,8 @@ owner: Antonio Linero
 first_published: 2015
 email: arlinero@stat.fsu.edu
 baseurl: "" # the subpath of your site, e.g. /blog
-# url: "http://ani.stat.fsu.edu/~arlinero"
-url: "http://localhost:4000"
+url: "http://ani.stat.fsu.edu/~arlinero"
+# url: "http://localhost:4000"
 permalink: pretty
 collections:
   publications:

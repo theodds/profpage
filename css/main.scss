@@ -524,7 +524,13 @@ body:not(.homepage) {
 
 @media screen and (min-width: 737px) {
   body.homepage #header {
-    height: 50vh;
-    min-height: 20em;
+    height: 10vh;
+    /* min-height: 20em; */
   }
+}
+
+@media screen {
+    .container {
+        width: 40em;
+    }
 }
