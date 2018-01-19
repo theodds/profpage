@@ -1,11 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.25)  29 NOV 2017 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.25)  19 JAN 2018 11:27
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**AntonioLineroCV.tex
+**\input AntonioLineroCV.tex
 (./AntonioLineroCV.tex
-LaTeX2e <2017-04-15>
-Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncv.cls
 Document Class: moderncv 2015/07/28 v2.0.0 modern curriculum vitae and letter d
 ocument class
@@ -1012,28 +1011,28 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 1852) in paragraph at lines 282--282
+Underfull \hbox (badness 1852) in paragraph at lines 281--281
 []|\T1/lmr/m/n/10.95 (+20) R, BUGS/JAGS/STAN, C++, Python, L[]T[]X, Mat-lab/Oct
 ave, Ju-lia,
  []
 
 [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 340.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 339.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 339.
  (./AntonioLineroCV.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 340.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 339.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 339.
 Package rerunfilecheck Info: File `AntonioLineroCV.out' has not changed.
 (rerunfilecheck)             Checksum: 2AA574DBB31194F48031381252C0657B;1743.
  ) 
 Here is how much of TeX's memory you used:
- 29595 strings out of 492990
- 550473 string characters out of 6135004
- 620793 words of memory out of 5000000
+ 29591 strings out of 492990
+ 550431 string characters out of 6135004
+ 620794 words of memory out of 5000000
  32686 multiletter control sequences out of 15000+600000
- 604010 words of font info for 103 fonts, out of 8000000 for 9000
+ 603797 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,12n,58p,10398b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,12n,58p,10405b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/
@@ -1042,7 +1041,7 @@ onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmro17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/marv
 osym/marvosym.pfb>
-Output written on AntonioLineroCV.pdf (3 pages, 242571 bytes).
+Output written on AntonioLineroCV.pdf (3 pages, 242593 bytes).
 PDF statistics:
  127 PDF objects out of 1000 (max. 8388607)
  111 compressed objects within 2 object streams
