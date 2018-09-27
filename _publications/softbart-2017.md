@@ -1,7 +1,7 @@
 ---
 authors: "Linero, A.R. and Yang, Y."
 displayDate: "2018+"
-date: 2018-12-31
+date: 2018-12-02
 title: "Bayesian Regression Tree Ensembles that Adapt to Smoothness and Sparsity"
 blurb: "Journal of the Royal Statistical Society, Series B. To appear."
 source: "https://arxiv.org/abs/1707.09461"
