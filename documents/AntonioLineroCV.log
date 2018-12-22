@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.11.10)  30 NOV 2018 00:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.11.10)  22 DEC 2018 18:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1016,40 +1016,43 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Underfull \hbox (badness 1852) in paragraph at lines 308--308
+Underfull \hbox (badness 1852) in paragraph at lines 315--315
 []|\T1/lmr/m/n/10.95 (+20) R, BUGS/JAGS/STAN, C++, Python, L[]T[]X, Mat-lab/Oct
 ave, Ju-lia,
  []
 
 [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 366.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 366.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 373.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 373.
  (./AntonioLineroCV.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 366.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 366.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 373.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 373.
 Package rerunfilecheck Info: File `AntonioLineroCV.out' has not changed.
 (rerunfilecheck)             Checksum: 2AA574DBB31194F48031381252C0657B;1743.
  ) 
 Here is how much of TeX's memory you used:
- 30597 strings out of 492641
- 560897 string characters out of 6131786
- 637465 words of memory out of 5000000
+ 30601 strings out of 492641
+ 560949 string characters out of 6131786
+ 638467 words of memory out of 5000000
  34017 multiletter control sequences out of 15000+600000
- 606194 words of font info for 106 fonts, out of 8000000 for 9000
+ 606407 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,12n,65p,812b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,12n,65p,812b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pf
-b></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmro17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/marv
-osym/marvosym.pfb>
-Output written on AntonioLineroCV.pdf (4 pages, 244112 bytes).
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm
+/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro17.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/marvosym/marvosym.pfb>
+Output written on AntonioLineroCV.pdf (4 pages, 252933 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 146 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
  19 named destinations out of 1000 (max. 500000)
  24189 words of extra memory for PDF output out of 24883 (max. 10000000)
 

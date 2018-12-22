@@ -1,7 +1,7 @@
 ---
 authors: "Linero, A.R., Sinha, D., and Lipsitz, S.R."
-displayDate: "2018+"
-date: 2018-12-03
+displayDate: "2019+"
+date: 2019-01-02
 title: "Semiparametric Mixed-Scale Models Using Shared Bayesian Forests"
 blurb: "Invited revision at Biometrics."
 source: "http://arxiv.org/abs/1809.08521"
