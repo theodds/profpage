@@ -22,6 +22,9 @@
     "sl"
     "sc"
     "cal"
-    "mit"))
+    "mit"
+    "docounter")
+   (LaTeX-add-counters
+    "pubcounter"))
  :latex)
 

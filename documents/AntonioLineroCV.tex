@@ -26,6 +26,11 @@
 % Define \cvdoublecolumn, which sets its arguments in two columns
 % without any labels
 
+
+\newcounter{pubcounter}
+\setcounter{pubcounter}{0}
+\newcommand{\docounter}{\stepcounter{pubcounter}\arabic{pubcounter}.}
+
 \newcommand{\cvdoublecolumn}[2]{%
   {}{%
     \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
@@ -125,7 +130,7 @@
 
 \vspace{.5em}
 
-\cvitem{}{
+\cvitem{\docounter}{
   \textbf{Linero, A.R.}, Sinha, D., and Lipsitz, S.R. (2018+)
   Semiparametric Mixed-Scale Models Using Shared Bayesian Forests. 
   Invited revision at \emph{Biometrics}. 
@@ -133,61 +138,67 @@
 
 \section{Publications in press}
 
-\cvitem{}{($\star \to$ graduate student)}
+\setcounter{pubcounter}{0}
 
+\cvitem{}{($\star \to$ graduate student)}
 \vspace{.5em}
 
-\cvitem{}{ Du, J.$^{\star}$ and \textbf{Linero A.R.}, (2019) Incorporating Grouping Information into Bayesian Decision Tree Ensembles. To appear in \emph{Proceedings of the 36th International Conference on Machine Learning (ICML)}. }
 
-\cvitem{}{
+% \begin{enumerate}
+% \item Du, J.$^{\star}$ and \textbf{Linero A.R.}, (2019) Incorporating Grouping Information into Bayesian Decision Tree Ensembles. To appear in \emph{Proceedings of the 36th International Conference on Machine Learning (ICML)}. 
+% \end{enumerate}
+
+\cvitem{\docounter}{ Du, J.$^{\star}$ and \textbf{Linero A.R.}, (2019) Incorporating Grouping Information into Bayesian Decision Tree Ensembles. To appear in \emph{Proceedings of the 36th International Conference on Machine Learning (ICML)}. }
+
+\cvitem{\docounter}{
   Du, J.$^{\star}$ and \textbf{Linero A.R.}, (2019) Interaction Detection with Bayesian Decision Tree Ensembles. 
   In \emph{Proceedings of the 22nd International Conference on Artificial Intelligence and Statistics (AISTATS)}.
 }
 
-\cvitem{}{Varbanov, R.$^{\star}$, Chicken, E., \textbf{Linero, A.R.}, and Yang, Y. (2019)
+\cvitem{\docounter}{Varbanov, R.$^{\star}$, Chicken, E., \textbf{Linero, A.R.}, and Yang, Y. (2019)
   A Bayesian Approach to Sequential Monitoring of Nonlinear Profiles Using Wavelets. \emph{Quality and Reliability Engineering International}, \textbf{35}(3), 761--775.}
 
-\cvitem{}{\textbf{Linero, A.R.} and Yang, Y. (2018) Bayesian Regression Tree Ensembles that Adapt to Smoothness and Sparsity. \emph{Journal of the Royal Statistical Society, Series B,} \textbf{80}(5), 1087--1110.}
+\cvitem{\docounter}{\textbf{Linero, A.R.} and Yang, Y. (2018) Bayesian Regression Tree Ensembles that Adapt to Smoothness and Sparsity. \emph{Journal of the Royal Statistical Society, Series B,} \textbf{80}(5), 1087--1110.}
 
-\cvitem{}{\textbf{Linero, A.R.}, Bradley, J.R, and Desaid, A.S.$^{\star}$ (2018) Multi-rubric Models for
+\cvitem{\docounter}{\textbf{Linero, A.R.}, Bradley, J.R, and Desaid, A.S.$^{\star}$ (2018) Multi-rubric Models for
   Ordinal Spatial Data with Application to Online Ratings. \emph{Annals of Applied Statistics,} \textbf{12}(4), 2054--2074.}
 
-\cvitem{}{\textbf{Linero, A.R.} and Daniels, M.J. (2018)  Bayesian Approaches for Missing Not at Random Outcome Data: The Role of Identifying Restrictions.
+\cvitem{\docounter}{\textbf{Linero, A.R.} and Daniels, M.J. (2018)  Bayesian Approaches for Missing Not at Random Outcome Data: The Role of Identifying Restrictions.
   \emph{Statistical Science,} \textbf{33}(2), 198--213.}
 
-\cvitem{}{\textbf{Linero, A.R.} (2018) Bayesian regression trees for high
+\cvitem{\docounter}{\textbf{Linero, A.R.} (2018) Bayesian regression trees for high
   dimensional prediction and variable selection. \emph{Journal of the American
     Statistical Association,} \textbf{113}(522), 626--636}
 
-\cvitem{}{\textbf{Linero, A.R.} (2017) A Review of Tree-Based Bayesian Methods. \emph{Communications for Statistical Applications and Methods,} \textbf{24}(6), 543--559.}
+\cvitem{\docounter}{\textbf{Linero, A.R.} (2017) A Review of Tree-Based Bayesian Methods. \emph{Communications for Statistical Applications and Methods,} \textbf{24}(6), 543--559.}
 
-\cvitem{}{Varbanov, R.$^{\star}$, Chicken, E., and \textbf{Linero, A.R.} (2017)
+\cvitem{\docounter}{Varbanov, R.$^{\star}$, Chicken, E., and \textbf{Linero, A.R.} (2017)
   Wavelet-Based Bayesian Profile Monitoring. \emph{Proceedings of
     the 2017 Industrial and Systems Engineering Research Conference.}}
 
-\cvitem{}{\textbf{Linero, A.R.} (2017) Bayesian Nonparametric Analysis of
+\cvitem{\docounter}{\textbf{Linero, A.R.} (2017) Bayesian Nonparametric Analysis of
   Longitudinal Studies in the Presence of Informative Missingness.
   \emph{Biometrika,} \textbf{104}(2), 371--341}
 
 
-\cvitem{}{
+\cvitem{\docounter}{
   Piekarewicz, J., \textbf{Linero, A.R.}, Giuliani, P., and Chicken, E. (2016)
   The power of two: Assessing the impact of a second measurement of the weak-charge
   form factor of \(^{208}\textnormal{Pb}\). \emph{Physical Reviews C,}
   \textbf{94}(3), 034316.
 }
 
-\cvitem{}{Daniels, M.J. and {\bf Linero, A.R.} (2015) Bayesian
+\cvitem{\docounter}{Daniels, M.J. and {\bf Linero, A.R.} (2015) Bayesian
   nonparametrics for missing data in longitudinal clinical
   trials. In {\em Nonparametric Bayesian Inference in Biostatistics.}}
 
-\cvitem{}{{\bf Linero, A.R.} and Daniels, M.J. (2015) A flexible
+\cvitem{\docounter}{{\bf Linero, A.R.} and Daniels, M.J. (2015) A flexible
   Bayesian approach to monotone missing data in longitudinal studies
   with nonignorable missingness with application to an acute
   schizophrenia clinical trial. {\em Journal of the American
     Statistical Association,} {\bf 110}(509), 45--55.}
 
-\cvitem{}{{\bf Linero, A.R} and Rosalsky, A. (2013) On the Toeplitz
+\cvitem{\docounter}{{\bf Linero, A.R} and Rosalsky, A. (2013) On the Toeplitz
   lemma, convergence in probability, and mean convergence. {\em Stochastic
   Analysis and Applications,} {\bf 31}(4), 684-694.}
   
@@ -290,10 +301,13 @@
   Biometrics,
   Biometrika, 
   Journal of the American Statistical Association,
+  Journal of Applied Statistics,
   Journal of Computational and Graphical Statistics,
   Journal of Epidemiology,
   Journal of the Korean Statistical Society,
+  Journal of the Royal Statistical Society, Series C.,
   Journal of Statistical Distributions and Applications,
+  Operations Research,
   PLOS One,
   Psychological Methods,
   Sankhya Series A,
@@ -313,6 +327,7 @@
 
 \subsection{At Florida State University}
 
+\cvitem{\textbf{STA5934}}{Bayesian Nonparametrics. Spring 2019}
 \cvitem{\textbf{STA4442}}{Introduction to Probability. Fall 2015, Spring 2017, 2018}
 \cvitem{\textbf{STA5168}}{Statistics in Applications 3. Fall 2016, 2017, 2018}
 \cvitem{\textbf{STA3032}}{Engineering Statistics. Spring 2016}
